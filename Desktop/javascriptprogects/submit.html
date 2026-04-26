@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+            box-sizing:border-box ;
+        }
+
+        .div{
+            margin: 10% auto;
+            background-color: #dddedd;
+            width: 30%;
+            overflow-y: scroll;
+            height: 200px;
+        }
+    </style>
+</head>
+<body>
+    <form action="">
+        <label for="name">name</label>
+        <input type="text" id="input"><br>
+        <input type="submit" id="btn">
+
+        <button id="btn">delete info</button>
+    </form>
+
+
+    
+    
+    <script >
+
+//         // javascript events
+// let btn = document.getElementById('btn')
+//    addEventListener('submit', (event) => {
+//     event.preventDefault();
+//     console.log('form submitted successfully');
+// })
+
+
+// scroll
+
+const input = document.getElementById('input');
+const button = document.getElementById('btn');
+button.addEventListener('click',(event)=>{
+    event.preventDefault();
+    let name = input.value;
+    if(name===""){
+        alert('will it work');
+    }
+    alert('hello ' + name + ' !')
+    localStorage.setItem('username',name);
+    console.log('name saved');
+
+    const savedname = localStorage.getItem('username');
+    alert('welcomeback, ' + savedname);
+    
+})
+
+const btn = document.getElementById('btn');
+btn.addEventListener('click',()=>{
+  let local=  localStorage.removeItem('username')
+    
+  })
+
+    </script>
+</body>
+</html>

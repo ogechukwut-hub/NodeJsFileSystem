@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        *{
+            margin: 0%;
+            padding: 0%;
+            box-sizing: border-box;
+        }
+        /* Hide nav links by default on mobile */
+.nav-links {
+  display: none;
+  flex-direction: column;
+  width: 100%;
+}
+
+/* Show links when the 'active' class is added */
+.nav-links.active {
+  display: flex;
+}
+
+/* Style the hamburger bars */
+.bar {
+  display: block;
+  width: 25px;
+  height: 3px;
+  margin: 5px auto;
+  background-color: #333;
+}
+    </style>
+</head>
+<body>
+   <nav class="navbar">
+  <div class="logo">MyBrand</div>
+  <!-- The Hamburger Button -->
+  <button class="hamburger" id="hamburger">
+    <span class="bar"></span>
+    <span class="bar"></span>
+    <span class="bar"></span>
+  </button>
+  <!-- The Nav Links -->
+  <ul class="nav-links" id="nav-links">
+    <li><a href="#">Home</a></li>
+    <li><a href="#">About</a></li>
+    <li><a href="#">Services</a></li>
+    <li><a href="#">Contact</a></li>
+  </ul>
+</nav> 
+
+<script>
+    const hamburger = document.getElementById('hamburger');
+const navLinks = document.getElementById('nav-links');
+
+hamburger.addEventListener('click', () => {
+  navLinks.classList.toggle('active');
+});
+</script>
+</body>
+</html>

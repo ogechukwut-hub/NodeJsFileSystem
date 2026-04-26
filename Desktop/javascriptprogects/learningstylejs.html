@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+    *{
+        margin: 0%;
+        padding: 0%;
+        box-sizing: border-box;
+    }
+
+
+    h1{
+        color: #345544;
+    }
+
+    h1 .action{
+     color:  green;
+    }
+
+    body{
+        background-color: white;
+        color: black;
+        transition: 0.1s;
+    }
+
+    </style>
+</head>
+<body class="main page">
+    
+    <button id="fof">
+        <h1>arewa</h1>
+    </button>
+
+    <script>
+    document.body.classList.add('article');
+     alert(document.body.className);
+     let fof = document.getElementById('fof');
+      fof.classList.toggle('ding')
+    fof.addEventListener('click',()=>{
+    fof.body.classList.toggle('action')
+    })
+     
+    </script>
+</body>
+</html>

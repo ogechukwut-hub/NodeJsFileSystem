@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1 id="come">hello world</h1>
+    <h4>hey what is up</h4>
+    <h4>hey what is up</h4>
+    <h4>hey what is up</h4>
+
+    <div class="div">mango</div>
+    <script>
+     let come = document.getElementById('come')
+     come.style.backgroundColor='yellow';
+     come.style.textAlign='center';
+     come.style.margin='0';
+     come.style.padding='0';
+
+     let h4Element=document.getElementsByTagName('h4')
+          h4Element[0].style.backgroundColor='red';
+          h4Element[1].style.backgroundColor='red';
+          h4Element[2].style.backgroundColor='red';
+
+    // let div = document.getElementsByClassName('div')
+    // div[0].style.backgroundColor='green';
+
+    let div = document.querySelector('.div')
+    div.style.backgroundColor='yellow';
+    </script>
+</body>
+</html>

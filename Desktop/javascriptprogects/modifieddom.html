@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        *{margin: 0%; padding: 0%; box-sizing: border-box;}
+        .body{
+            width: 100%;
+            max-height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        .alert{
+            font-family:Arial, Helvetica, sans-serif;
+            font-size: medium;
+            background-color: #5f5f5f;
+            color: #fff;
+            border: 1px solid #993999 ;
+            max-width:fit-content ;
+            border-radius: 4px; 
+            margin-top: 25vh;
+        }
+    </style>
+</head>
+<body class="body">
+    
+    <script>
+        let div = document.createElement('div')
+        div.className='alert'
+        div.innerHTML='<strong>wlecome </strong> to this simple webpage made completely with javascript </br> and no html'
+        document.body.append(div);
+
+        const person ={
+            name:'oge',
+            class:'ss1',
+            age:13,
+            isemployed:false,
+            hobby:()=>{console.log('hi am oge am in ss1 i love coding and i love coding because it makes me crack my brain am always coding for life i want to be sucessfull like markzuckerberg')}
+        }
+        person.hobby()
+    </script>
+</body>
+</html>

@@ -1,0 +1,81 @@
+<!-- async await -->
+ <!DOCTYPE html>
+ <html lang="en">
+ <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+ </head>
+ <body>
+    <script>
+function walkdog(){
+return chores = new Promise((resolve,reject)=>{
+    setTimeout(()=>{
+        let walkingdog=true;
+        if(walkingdog){
+            resolve('you walked the dog')
+        }
+
+        else{reject(console.error('why didt you walk the dog'))};
+    },2000)
+})
+}
+walkdog()
+.then((resolve)=>{console.log(resolve)})
+.catch((error)=>{console.log(error)})
+
+
+function cleankitchen(){
+return chores = new Promise((resolve,reject)=>{
+    setTimeout(()=>{
+        let cleankitchen=true;
+        if(cleankitchen){
+            resolve('you cleaned the kitchen');
+        }
+
+        else{reject('you didnt clean the kitchen')}
+    },5000)
+})
+}
+cleankitchen()
+.then((resolve)=>{console.log(resolve)})
+.catch((error)=>{console.log(error)})
+
+
+
+
+function washedcloths(){
+return chores = new Promise((resolve,reject)=>{
+    setTimeout(()=>{
+        let washedcloths=true;
+        if(washedcloths){
+            resolve('you washed the cloths')
+        }
+
+        else{reject('why didt wash the cloths')}
+    },9000)
+})
+}
+washedcloths()
+.then((resolve)=>{console.log(resolve)})
+.catch((error)=>{console.log(error)})
+
+
+async function dochores(){
+    try{
+    const walkdog = await walkdog();
+    console.log(walkdog);
+
+        const cleankitchen = await cleankitchen();
+    console.log(cleankitchen);
+
+        const washedcloths = await washedcloths ();
+    console.log(washedcloths );
+    } catch(error){
+        error
+    }
+
+}
+    </script>
+ </body>
+ </html>

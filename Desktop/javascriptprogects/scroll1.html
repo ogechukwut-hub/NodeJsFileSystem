@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>JS Events Lesson</title>
+    <style>
+        body { font-family: sans-serif; padding: 20px; line-height: 1.6; }
+        #scroll-box {
+            width: 300px;
+            height: 200px;
+            border: 2px solid #333;
+            overflow-y: scroll; /* Makes it scrollable */
+            padding: 10px;
+            margin-top: 20px;
+        }
+        .content-spacer { height: 600px; background: linear-gradient(to bottom, #eee, #333); }
+    </style>
+</head>
+<body>
+
+    <h3>1. Input Event</h3>
+    <input type="text" id="my-input" placeholder="Type something here...">
+    <input type="submit" value="submit">
+
+    <h3>2. Scroll Event</h3>
+    <div id="scroll-box">
+        <p>Scroll down to see the magic!</p>
+        <div class="content-spacer"></div>
+        <p id="person">You've reached the bottom!</p>
+    </div>
+
+    <script>
+        const input = document.getElementById('my-input');
+        input.addEventListener('input',(event)=>{
+            let data = event.target.value;
+            
+            console.log(`curent data: ${data}`)
+
+        })
+
+
+        const scrollbox=document.getElementById('scroll-box');
+        scrollbox.addEventListener('scroll',()=>{
+            const position = scrollbox.scrolltop;
+            console.log('reached destination ' + position + '!')
+
+        })
+
+            let duce = document.getElementById('person')
+            addEventListener('scroll',()=>{
+            if(person.scrollY > 50){
+            duce.style.Color='gold';
+            }
+
+            else{duce.style.display='none'};
+            })
+
+
+
+
+    </script>
+</body>
+</html>

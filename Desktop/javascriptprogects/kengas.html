@@ -1,0 +1,311 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Industrial Gas Solutions | Nitrogen, Oxygen, Acetylene</title>
+    <style>
+        /* CSS RESET & VARIABLES */
+        :root {
+            --primary: #0a2351;
+            --secondary: #1a5cff;
+            --accent: #ffcc00;
+            --light: #f4f7f9;
+            --dark: #050b16;
+            --text: #334155;
+            --white: #ffffff;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+        }
+
+        html { scroll-behavior: smooth; }
+
+        body {
+            background-color: var(--light);
+            color: var(--text);
+            line-height: 1.6;
+        }
+
+        /* NAVIGATION */
+        nav {
+            background: var(--white);
+            height: 80px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 0 5%;
+            position: fixed;
+            width: 100%;
+            top: 0;
+            z-index: 1000;
+            box-shadow: 0 2px 15px rgba(0,0,0,0.1);
+        }
+
+        .logo {
+            font-size: 1.5rem;
+            font-weight: 800;
+            color: var(--primary);
+            letter-spacing: -1px;
+        }
+
+        .logo span { color: var(--secondary); }
+
+        .nav-links { display: flex; list-style: none; }
+
+        .nav-links li { margin-left: 30px; }
+
+        .nav-links a {
+            text-decoration: none;
+            color: var(--primary);
+            font-weight: 600;
+            font-size: 0.9rem;
+            text-transform: uppercase;
+            transition: 0.3s;
+        }
+
+        .nav-links a:hover { color: var(--secondary); }
+
+        /* HERO SECTION */
+        header {
+            height: 100vh;
+            background: linear-gradient(rgba(10, 35, 81, 0.85), rgba(5, 11, 22, 0.9)),
+                        url('https://images.unsplash.com') center/cover;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+            color: var(--white);
+            padding: 0 20px;
+            margin-top: 0;
+        }
+
+        header h1 {
+            font-size: clamp(2.5rem, 6vw, 4.5rem);
+            margin-bottom: 20px;
+            font-weight: 800;
+        }
+
+        header p {
+            font-size: 1.2rem;
+            max-width: 700px;
+            margin-bottom: 40px;
+            color: #cbd5e1;
+        }
+
+        .cta-btn {
+            background: var(--secondary);
+            color: var(--white);
+            padding: 18px 35px;
+            text-decoration: none;
+            border-radius: 5px;
+            font-weight: bold;
+            transition: 0.3s;
+        }
+
+        .cta-btn:hover { background: var(--white); color: var(--primary); }
+
+        /* SERVICE CARDS SECTION */
+        .services {
+            padding: 100px 5%;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        .section-title {
+            text-align: center;
+            margin-bottom: 60px;
+        }
+
+        .section-title h2 {
+            font-size: 2.5rem;
+            color: var(--primary);
+            margin-bottom: 10px;
+        }
+
+        .card-container {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 30px;
+            padding: 25px;
+            background-color: #cbd5e1;
+            align-items: center;
+            justify-content: center;
+            border-radius: 13px;
+        }
+
+
+        .card {
+            background: var(--white);
+            padding: 40px;
+            border-radius: 15px;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.05);
+            border-top: 5px solid var(--secondary);
+            transition: transform 0.3s ease;
+        }
+
+        .card:hover { transform: translateY(-10px); }
+
+        .card h3 {
+            font-size: 1.6rem;
+            color: var(--primary);
+            margin-bottom: 15px;
+            display: flex;
+            align-items: center;
+        }
+
+        .card .symbol {
+            font-size: 0.8rem;
+            background: #e2e8f0;
+            padding: 4px 8px;
+            border-radius: 4px;
+            margin-left: 10px;
+        }
+
+        .card p {
+            color: var(--text);
+            font-size: 1rem;
+        }
+
+        /* CONTACT SECTION */
+        .contact {
+            background: var(--dark);
+            color: var(--white);
+            padding: 100px 5%;
+            text-align: center;
+        }
+
+        .contact h2 { margin-bottom: 50px; font-size: 2.5rem; }
+
+        .contact-grid {
+            display: flex;
+            justify-content: center;
+            gap: 20px;
+            flex-wrap: wrap;
+        }
+
+        .contact-link {
+            background: rgba(255,255,255,0.05);
+            padding: 30px 50px;
+            border-radius: 10px;
+            text-decoration: none;
+            color: var(--white);
+            min-width: 250px;
+            border: 1px solid rgba(255,255,255,0.1);
+            transition: 0.3s;
+        }
+
+        .contact-link:hover {
+            background: var(--secondary);
+            border-color: var(--secondary);
+            transform: scale(1.05);
+        }
+
+        .contact-link strong {
+            display: block;
+            font-size: 1.4rem;
+            margin-bottom: 5px;
+        }
+
+        .contact-link span {
+            font-size: 0.9rem;
+            opacity: 0.7;
+        }
+
+        /* FOOTER */
+        footer {
+            background: #020617;
+            color: #64748b;
+            padding: 40px 5%;
+            text-align: center;
+            font-size: 0.9rem;
+        }
+
+        /* RESPONSIVE DESIGN */
+        @media (max-width: 768px) {
+            .nav-links { display: none; }
+            header h1 { font-size: 2.5rem; }
+            .contact-link { width: 100%; }
+        }
+    </style>
+</head>
+<body>
+
+    <nav>
+        <div class="logo">MOKGAS<span>PRO</span> </div>
+        <ul class="nav-links">
+            <div class="logo">INDUSTRIAL</div>
+        </ul>
+    </nav>
+
+    <header id="home">
+        <h1>Pure Industrial Gases</h1>
+        <p>Your trusted 2026 partner for high-pressure Nitrogen, Oxygen, and Acetylene. Supporting manufacturing, welding, and medical sectors with 99.9% purity standards.</p>
+        <a href="mailto:" class="cta-btn">PLACE YOUR ORDER</a>
+    </header>
+
+    <section id="services" class="services">
+        <div class="section-title">
+            <h2>Our Gas Solutions</h2>
+            <p>Certified industrial grade supplies delivered to your facility.</p>
+        </div>
+
+        <div class="card-container">
+            <!-- Nitrogen Card -->
+            <div class="card">
+                <h3>Oxygen <span class="symbol">O₂</span></h3>
+            </div>
+
+            <!-- Oxygen Card -->
+            <div class="card" style="border-color: #ef4444;">
+                <h3>Nitrogen <span class="symbol">N₂</span></h3>
+            </div>
+
+            <!-- Acetylene Card -->
+            <div class="card" style="border-color: #f59e0b;">
+                <h3>Acetylene <span class="symbol">C₂H₂</span></h3>
+            </div>
+            <div class="card" style="border-color: #f59e0b;">
+                <h3>Argon <span class="symbol">Ar</span></h3>
+            </div>
+            <div class="card" style="border-color: #f59e0b;">
+                <h3><p>CO <sub>2</sub></p> </h3>
+            </div>
+            <div class="card" style="border-color: #f59e0b;">
+                <h3>And other industrial gases <h4></h2></h3>
+            </div>
+            
+        </div>
+    </section>
+
+    <section id="contact" class="contact">
+        <h2>Connect With Our Sales Team</h2>
+        <div class="contact-grid">
+            <a href="https://wa.me" class="contact-link">
+                <strong>WhatsApp</strong>
+                <span>Instant Inquiry & Orders</span>
+            </a>
+
+            <a href="mailto:sales@gasproindustrial.com" class="contact-link">
+                <strong>Email Us</strong>
+                <span>Official Quotes & RFQs</span>
+            </a>
+
+            <a href="tel:+1234567890" class="contact-link">
+                <strong>Call Center</strong>
+                <span>Speak to a Technician</span>
+            </a>
+        </div>
+    </section>
+
+    <footer>
+        <p>&copy; 2026 GasPro Industrial Solutions. All cylinders are tested to ISO safety standards.</p>
+    </footer>
+
+</body>
+</html>

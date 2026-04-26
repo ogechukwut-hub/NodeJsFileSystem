@@ -1,0 +1,17 @@
+
+/* posiion static;  //this is a defult position set for all elements in html */
+
+/* position: absolute; //this make the element take a position relative to its parent element
+element, by defult it's parent element becomes the body element, unless its parent element is set to relative */
+
+/*position: fixed;//elements with position fixed are removed from the normal document
+flow and positioned relative to the viewport(the browsers window). They remain in the same
+position on the screen even when the screen is scrowed */
+
+/* position: relative;// elements with position releative are positioned relative to their normal position
+in the document flow they can be moved using (top) (bottom) (left) & (right) */
+
+/* position stickey ;// they are positioned based on user scroll they behave like position: relative
+until a certain scroll is offset is reached at which point they become stuck in place like position:fixed */
+
+

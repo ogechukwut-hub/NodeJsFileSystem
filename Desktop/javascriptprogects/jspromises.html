@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        const mypizzapromise = new Promise((resolve,reject)=>{
+            let ovenisworking = true;
+            let oven = 'orger placed';
+            console.log(oven);
+            setTimeout(()=>{
+                if(ovenisworking){
+                    resolve('hot delicacy');
+                }
+
+                else{
+                    reject('ovenbroke');
+                }
+            },2000)
+        })
+
+        mypizzapromise
+        .then((resolve)=>{console.log(resolve)})
+        .catch((error)=>{console.log(error)});
+    </script>
+</body>
+</html>

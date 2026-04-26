@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        *{
+            margin: 0%;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body{
+            background-color: white;
+            color: black;
+            transition: 0.1s;
+        }
+
+        body.det{
+           background-color: black; 
+           color: white;
+        }
+    </style>
+</head>
+<body>
+    <button id="btn">
+        <h2>click</h2>
+    </button>
+
+    <script>
+        const btn = document.getElementById('btn');
+        btn.addEventListener('click', ()=> {
+            document.body.classList.toggle('det')
+        })
+    </script>
+</body>
+</html>

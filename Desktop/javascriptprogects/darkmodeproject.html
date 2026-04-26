@@ -1,0 +1,38 @@
+<!-- i did this because i was trying to learn for ur ifo i havent enter javascrips evnt -->
+ <!DOCTYPE html>
+ <html lang="en">
+ <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        *{
+            margin: 0%;
+            padding: 0%;
+            box-sizing: border-box;
+        }
+
+        body{
+            background-color: white;
+            color: black;
+            transition: 0.3s;
+        }
+
+        body.darkmode{
+            background-color: #222;
+            color: #f0f0f0;
+        }
+    </style>
+ </head>
+ <body>
+    <button id="btn">
+        <h2>click me</h2>
+    </button>
+    <script>
+      const btn = document.getElementById('btn')
+      btn.addEventListener('click',()=> {
+        document.body.classList.toggle('darkmode')
+      })
+    </script>
+ </body>
+ </html>

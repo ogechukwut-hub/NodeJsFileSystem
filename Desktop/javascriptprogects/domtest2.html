@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1 id="id">hello world</h1>
+    <h4>hi</h4>
+    <div class="div">food</div>
+    <div class="div">food</div>
+    <div class="div">food</div>
+    <script>
+        let id = document.getElementById('id');
+        id.style.backgroundColor='red';
+        id.style.textAlign='center';
+        id.style.borderRadius='10px';
+
+        let h4Element = document.getElementsByTagName('h4')
+        h4Element[0].style.backgroundColor='yellow';
+
+        // let div = document.getElementsByClassName('div');
+        // div[0].style.backgroundColor='red'
+        
+        let div = document.querySelector('.div');
+        div.style.backgroundColor='red'
+
+
+
+
+    </script>
+</body>
+</html>
